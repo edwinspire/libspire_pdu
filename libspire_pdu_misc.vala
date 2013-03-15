@@ -851,7 +851,8 @@ PDU_ALPHABET Alpha = PDU_ALPHABET.DEFAULT;
 if(Text.length<=70){
 Alpha = PDU_ALPHABET.UCS2;
 }else if(Text.length<=140){
-Alpha = PDU_ALPHABET.DATA8Bits;
+//TODO: Se ha probado este tipo de mensaje y se ha comprobado que no son soportados por la varios telefonos
+//Alpha = PDU_ALPHABET.DATA8Bits;
 }
 return Alpha;
 }
