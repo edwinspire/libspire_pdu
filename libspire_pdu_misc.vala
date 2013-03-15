@@ -320,6 +320,9 @@ public static string trim(string value){
 return Miscellaneous.StringTrim(value);
 }
 
+
+
+
 /*
 private static char CharToSevenBitExtension(char c){
 char Retorno = c;
@@ -767,18 +770,15 @@ public static string ConvertUCS2ToASCII(string UCS2){
 Octet CaracterHexa = new Octet();
 
 if (TextoUCS2.len>=4) {
+//stdout.printf("UCS2 = %s\n", UCS2);
 while(TextoUCS2.len>0){
 
 if (TextoUCS2.len>=4) {
 
-	//CaracterHexa = Convert.ToInt32(TextoUCS2.str.substring(0, 4), 16);
-//			CaracterHexa = Miscellaneous.hex2number(TextoUCS2.str.substring(0, 4));
 CaracterHexa.Hex = TextoUCS2.str.substring(0, 4);
 
-//	TextoFinal.append_printf("%c", CaracterHexa);
 	TextoFinal.append_unichar(CaracterHexa.Dec);
-
-
+//        stdout.printf ("%s >> [%i]\n", TextoFinal.str, CaracterHexa.Dec);
 	TextoUCS2.erase(0, 4);
 
 		} else {
@@ -814,7 +814,7 @@ return TextoFinal.str;
 public static string ConvertASCIIToUCS2(string Text){
 
 string Retorno = "0000";
-char[] MatrizCaracteres = Text.to_utf8();
+//char[] MatrizCaracteres = Text.to_utf8();
 
  	StringBuilder TextoConvertido = new StringBuilder();
 
@@ -829,19 +829,6 @@ hexOutput.Dec = (int)c;
 TextoConvertido.append(hexOutput.Hex);
 //        stdout.printf ("%s is [%i]\n", c.to_string (), CharHex.Dec);
     }
-
-/*
-Octet hexOutput = new Octet();
-hexOutput.DigitHex = 4;
-//TODO// Confirmar que esto funcine correctamente
-foreach (char Caracter in MatrizCaracteres){
-// Convert the decimal value to a hexadecimal value in string form y completamos la cadena para que tenga 4 digitos de longitud
-//hexOutput = Miscellaneous.number2hex(Caracter, 4);
-hexOutput.Dec = Caracter;
-	TextoConvertido.append(hexOutput.Hex);
-}
-*/
-
 
 Retorno = TextoConvertido.str;
 return Retorno;
@@ -869,7 +856,7 @@ Alpha = PDU_ALPHABET.DATA8Bits;
 return Alpha;
 }
 
-
+/*
 /// <summary>
 /// Convierte caracter ascci ISO8859_1 con su correspondiente caracter en PDU
 /// </summary>
@@ -891,6 +878,7 @@ foreach(var entry in Alphabet7bit_ASCII().entries){
 //print("ConvertASCIIToPDU [%i] => [%i]\n", ASCIIValue, Retorno);
 	 return Retorno;
  }
+*/
 
  /// <summary>
  /// Convierte de Ascci a PDU en Hexadecimal 8 bits
