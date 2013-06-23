@@ -510,10 +510,10 @@ Message.ToTXT(CadenaPDU.str, DCS.Alpha);
 
 public class SUBMITwithDCSGeneralDataCodingIndication: SUBMIT{
 
-public SUBMITwithDCSGeneralDataCodingIndication(string phone, string message = "", bool statusreport = false, DCS_MESSAGE_CLASS msgclass =  DCS_MESSAGE_CLASS.TE_SPECIFIC){
+public SUBMITwithDCSGeneralDataCodingIndication(string phone, string message = "", bool statusreport = false, bool EnableMsgClass = false, DCS_MESSAGE_CLASS msgclass =  DCS_MESSAGE_CLASS.TE_SPECIFIC){
 var DCSi = new DCS_GeneralDataCodingIndication();
 DCSi.MessageClass = msgclass;
-DCSi.HaveAMessageClassMeaning = true;
+DCSi.HaveAMessageClassMeaning = EnableMsgClass;
 this.DCS = DCSi;
 this.PHONE.TXT = phone;
 this.Message.TXT = message;

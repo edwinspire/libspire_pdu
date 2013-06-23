@@ -207,7 +207,7 @@ namespace edwinspire {
 		}
 		[CCode (cheader_filename = "libspire_pdu.h")]
 		public class SUBMITwithDCSGeneralDataCodingIndication : edwinspire.PDU.SUBMIT {
-			public SUBMITwithDCSGeneralDataCodingIndication (string phone, string message = "", bool statusreport = false, edwinspire.PDU.DCS_MESSAGE_CLASS msgclass = DCS_MESSAGE_CLASS.TE_SPECIFIC);
+			public SUBMITwithDCSGeneralDataCodingIndication (string phone, string message = "", bool statusreport = false, bool EnableMsgClass = false, edwinspire.PDU.DCS_MESSAGE_CLASS msgclass = DCS_MESSAGE_CLASS.TE_SPECIFIC);
 		}
 		[CCode (cheader_filename = "libspire_pdu.h")]
 		public class TP_SCTS : edwinspire.PDU.Datetime {
