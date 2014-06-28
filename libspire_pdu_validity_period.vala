@@ -334,6 +334,7 @@ break;
 case VALIDITY_PERIOD_FORMAT.ENHANCED:
 //Retorno.append("00000000000000");
 GLib.stdout.printf("<NOT SUPPORTED VALIDITY_PERIOD_FORMAT.ENHANCED> \n");
+
 break;
 }
 GLib.stdout.printf("PDU: %s\n", ENCODE());

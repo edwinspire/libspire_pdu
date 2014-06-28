@@ -510,6 +510,7 @@ return Miscellaneous.ConvertIntToBin((int)this, 2);
 /// Grupo de Bits de DCS
 /// </summary>
 public enum DCS_CODING_GROUP_BITS{
+
 	/// <summary>
 	/// General
 	/// </summary>
