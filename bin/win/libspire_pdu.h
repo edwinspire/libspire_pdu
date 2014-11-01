@@ -5,64 +5,15 @@
 #define __E__PROYECTS_LIBSPIRE_PDU_BIN_WIN_LIBSPIRE_PDU_H__
 
 #include <glib.h>
+#include <glib-object.h>
 #include <stdlib.h>
 #include <string.h>
-#include <glib-object.h>
 #include <float.h>
 #include <math.h>
 #include <gee.h>
 
 G_BEGIN_DECLS
 
-
-#define EDWINSPIRE_PDU_TYPE_STRING_PD_U7_BITS (edwinspire_pdu_string_pd_u7_bits_get_type ())
-typedef struct _edwinspirePDUStringPDU7Bits edwinspirePDUStringPDU7Bits;
-
-#define EDWINSPIRE_PDU_TYPE_DATETIME (edwinspire_pdu_datetime_get_type ())
-#define EDWINSPIRE_PDU_DATETIME(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_DATETIME, edwinspirePDUDatetime))
-#define EDWINSPIRE_PDU_DATETIME_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_DATETIME, edwinspirePDUDatetimeClass))
-#define EDWINSPIRE_PDU_IS_DATETIME(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_DATETIME))
-#define EDWINSPIRE_PDU_IS_DATETIME_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_DATETIME))
-#define EDWINSPIRE_PDU_DATETIME_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_DATETIME, edwinspirePDUDatetimeClass))
-
-typedef struct _edwinspirePDUDatetime edwinspirePDUDatetime;
-typedef struct _edwinspirePDUDatetimeClass edwinspirePDUDatetimeClass;
-typedef struct _edwinspirePDUDatetimePrivate edwinspirePDUDatetimePrivate;
-
-#define EDWINSPIRE_PDU_TYPE_TEXT_CONVERT (edwinspire_pdu_text_convert_get_type ())
-#define EDWINSPIRE_PDU_TEXT_CONVERT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT, edwinspirePDUTextConvert))
-#define EDWINSPIRE_PDU_TEXT_CONVERT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT, edwinspirePDUTextConvertClass))
-#define EDWINSPIRE_PDU_IS_TEXT_CONVERT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT))
-#define EDWINSPIRE_PDU_IS_TEXT_CONVERT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT))
-#define EDWINSPIRE_PDU_TEXT_CONVERT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT, edwinspirePDUTextConvertClass))
-
-typedef struct _edwinspirePDUTextConvert edwinspirePDUTextConvert;
-typedef struct _edwinspirePDUTextConvertClass edwinspirePDUTextConvertClass;
-typedef struct _edwinspirePDUTextConvertPrivate edwinspirePDUTextConvertPrivate;
-
-#define EDWINSPIRE_PDU_TYPE_PDU_ALPHABET (edwinspire_pdu_pdu_alphabet_get_type ())
-
-#define EDWINSPIRE_PDU_TYPE_MISCELLANEOUS (edwinspire_pdu_miscellaneous_get_type ())
-#define EDWINSPIRE_PDU_MISCELLANEOUS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS, edwinspirePDUMiscellaneous))
-#define EDWINSPIRE_PDU_MISCELLANEOUS_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS, edwinspirePDUMiscellaneousClass))
-#define EDWINSPIRE_PDU_IS_MISCELLANEOUS(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS))
-#define EDWINSPIRE_PDU_IS_MISCELLANEOUS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS))
-#define EDWINSPIRE_PDU_MISCELLANEOUS_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS, edwinspirePDUMiscellaneousClass))
-
-typedef struct _edwinspirePDUMiscellaneous edwinspirePDUMiscellaneous;
-typedef struct _edwinspirePDUMiscellaneousClass edwinspirePDUMiscellaneousClass;
-typedef struct _edwinspirePDUMiscellaneousPrivate edwinspirePDUMiscellaneousPrivate;
-
-#define EDWINSPIRE_PDU_TYPE_TP_SCTS (edwinspire_pdu_tp_scts_get_type ())
-#define EDWINSPIRE_PDU_TP_SCTS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_TP_SCTS, edwinspirePDUTP_SCTS))
-#define EDWINSPIRE_PDU_TP_SCTS_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_TP_SCTS, edwinspirePDUTP_SCTSClass))
-#define EDWINSPIRE_PDU_IS_TP_SCTS(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_TP_SCTS))
-#define EDWINSPIRE_PDU_IS_TP_SCTS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_TP_SCTS))
-#define EDWINSPIRE_PDU_TP_SCTS_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_TP_SCTS, edwinspirePDUTP_SCTSClass))
-
-typedef struct _edwinspirePDUTP_SCTS edwinspirePDUTP_SCTS;
-typedef struct _edwinspirePDUTP_SCTSClass edwinspirePDUTP_SCTSClass;
-typedef struct _edwinspirePDUTP_SCTSPrivate edwinspirePDUTP_SCTSPrivate;
 
 #define EDWINSPIRE_PDU_TYPE_OCTET (edwinspire_pdu_octet_get_type ())
 #define EDWINSPIRE_PDU_OCTET(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_OCTET, edwinspirePDUOctet))
@@ -73,65 +24,20 @@ typedef struct _edwinspirePDUTP_SCTSPrivate edwinspirePDUTP_SCTSPrivate;
 
 typedef struct _edwinspirePDUOctet edwinspirePDUOctet;
 typedef struct _edwinspirePDUOctetClass edwinspirePDUOctetClass;
-
-#define EDWINSPIRE_PDU_TYPE_IPROTOCOL_IDENTIFIER (edwinspire_pdu_iprotocol_identifier_get_type ())
-#define EDWINSPIRE_PDU_IPROTOCOL_IDENTIFIER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_IPROTOCOL_IDENTIFIER, edwinspirePDUIProtocolIdentifier))
-#define EDWINSPIRE_PDU_IS_IPROTOCOL_IDENTIFIER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_IPROTOCOL_IDENTIFIER))
-#define EDWINSPIRE_PDU_IPROTOCOL_IDENTIFIER_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), EDWINSPIRE_PDU_TYPE_IPROTOCOL_IDENTIFIER, edwinspirePDUIProtocolIdentifierIface))
-
-typedef struct _edwinspirePDUIProtocolIdentifier edwinspirePDUIProtocolIdentifier;
-typedef struct _edwinspirePDUIProtocolIdentifierIface edwinspirePDUIProtocolIdentifierIface;
-
-#define EDWINSPIRE_PDU_TYPE_PID_GROUP (edwinspire_pdu_pid_group_get_type ())
 typedef struct _edwinspirePDUOctetPrivate edwinspirePDUOctetPrivate;
 
-#define EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE (edwinspire_pdu_pid_scspecificuse_get_type ())
-#define EDWINSPIRE_PDU_PID_SCSPECIFICUSE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE, edwinspirePDUPID_SCSpecificUse))
-#define EDWINSPIRE_PDU_PID_SCSPECIFICUSE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE, edwinspirePDUPID_SCSpecificUseClass))
-#define EDWINSPIRE_PDU_IS_PID_SCSPECIFICUSE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE))
-#define EDWINSPIRE_PDU_IS_PID_SCSPECIFICUSE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE))
-#define EDWINSPIRE_PDU_PID_SCSPECIFICUSE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE, edwinspirePDUPID_SCSpecificUseClass))
+#define EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT (edwinspire_pdu_text_pdu_text_get_type ())
+#define EDWINSPIRE_PDU_TEXT_PDU_TEXT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT, edwinspirePDUTextPDUText))
+#define EDWINSPIRE_PDU_TEXT_PDU_TEXT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT, edwinspirePDUTextPDUTextClass))
+#define EDWINSPIRE_PDU_IS_TEXT_PDU_TEXT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT))
+#define EDWINSPIRE_PDU_IS_TEXT_PDU_TEXT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT))
+#define EDWINSPIRE_PDU_TEXT_PDU_TEXT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT, edwinspirePDUTextPDUTextClass))
 
-typedef struct _edwinspirePDUPID_SCSpecificUse edwinspirePDUPID_SCSpecificUse;
-typedef struct _edwinspirePDUPID_SCSpecificUseClass edwinspirePDUPID_SCSpecificUseClass;
-typedef struct _edwinspirePDUPID_SCSpecificUsePrivate edwinspirePDUPID_SCSpecificUsePrivate;
+typedef struct _edwinspirePDUTextPDUText edwinspirePDUTextPDUText;
+typedef struct _edwinspirePDUTextPDUTextClass edwinspirePDUTextPDUTextClass;
+typedef struct _edwinspirePDUTextPDUTextPrivate edwinspirePDUTextPDUTextPrivate;
 
-#define EDWINSPIRE_PDU_TYPE_PID_RESERVED (edwinspire_pdu_pid_reserved_get_type ())
-#define EDWINSPIRE_PDU_PID_RESERVED(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_PID_RESERVED, edwinspirePDUPID_Reserved))
-#define EDWINSPIRE_PDU_PID_RESERVED_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_PID_RESERVED, edwinspirePDUPID_ReservedClass))
-#define EDWINSPIRE_PDU_IS_PID_RESERVED(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_PID_RESERVED))
-#define EDWINSPIRE_PDU_IS_PID_RESERVED_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_PID_RESERVED))
-#define EDWINSPIRE_PDU_PID_RESERVED_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_PID_RESERVED, edwinspirePDUPID_ReservedClass))
-
-typedef struct _edwinspirePDUPID_Reserved edwinspirePDUPID_Reserved;
-typedef struct _edwinspirePDUPID_ReservedClass edwinspirePDUPID_ReservedClass;
-typedef struct _edwinspirePDUPID_ReservedPrivate edwinspirePDUPID_ReservedPrivate;
-
-#define EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE (edwinspire_pdu_pid_messagetype_get_type ())
-#define EDWINSPIRE_PDU_PID_MESSAGETYPE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE, edwinspirePDUPID_MessageType))
-#define EDWINSPIRE_PDU_PID_MESSAGETYPE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE, edwinspirePDUPID_MessageTypeClass))
-#define EDWINSPIRE_PDU_IS_PID_MESSAGETYPE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE))
-#define EDWINSPIRE_PDU_IS_PID_MESSAGETYPE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE))
-#define EDWINSPIRE_PDU_PID_MESSAGETYPE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE, edwinspirePDUPID_MessageTypeClass))
-
-typedef struct _edwinspirePDUPID_MessageType edwinspirePDUPID_MessageType;
-typedef struct _edwinspirePDUPID_MessageTypeClass edwinspirePDUPID_MessageTypeClass;
-typedef struct _edwinspirePDUPID_MessageTypePrivate edwinspirePDUPID_MessageTypePrivate;
-
-#define EDWINSPIRE_PDU_TYPE_PID_SHORT_MESSAGE (edwinspire_pdu_pid_short_message_get_type ())
-
-#define EDWINSPIRE_PDU_TYPE_PID_INTERWORKING (edwinspire_pdu_pid_interworking_get_type ())
-#define EDWINSPIRE_PDU_PID_INTERWORKING(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING, edwinspirePDUPID_InterWorking))
-#define EDWINSPIRE_PDU_PID_INTERWORKING_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING, edwinspirePDUPID_InterWorkingClass))
-#define EDWINSPIRE_PDU_IS_PID_INTERWORKING(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING))
-#define EDWINSPIRE_PDU_IS_PID_INTERWORKING_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING))
-#define EDWINSPIRE_PDU_PID_INTERWORKING_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING, edwinspirePDUPID_InterWorkingClass))
-
-typedef struct _edwinspirePDUPID_InterWorking edwinspirePDUPID_InterWorking;
-typedef struct _edwinspirePDUPID_InterWorkingClass edwinspirePDUPID_InterWorkingClass;
-typedef struct _edwinspirePDUPID_InterWorkingPrivate edwinspirePDUPID_InterWorkingPrivate;
-
-#define EDWINSPIRE_PDU_TYPE_PID_TYPE_TELEMATIC_DEVICE (edwinspire_pdu_pid_type_telematic_device_get_type ())
+#define EDWINSPIRE_PDU_TYPE_PDU_ALPHABET (edwinspire_pdu_pdu_alphabet_get_type ())
 
 #define EDWINSPIRE_PDU_TYPE_IDATA_CODING_SCHEME (edwinspire_pdu_idata_coding_scheme_get_type ())
 #define EDWINSPIRE_PDU_IDATA_CODING_SCHEME(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_IDATA_CODING_SCHEME, edwinspirePDUIDataCodingScheme))
@@ -193,6 +99,86 @@ typedef struct _edwinspirePDUDCS_Reserved edwinspirePDUDCS_Reserved;
 typedef struct _edwinspirePDUDCS_ReservedClass edwinspirePDUDCS_ReservedClass;
 typedef struct _edwinspirePDUDCS_ReservedPrivate edwinspirePDUDCS_ReservedPrivate;
 
+#define EDWINSPIRE_PDU_TYPE_IPROTOCOL_IDENTIFIER (edwinspire_pdu_iprotocol_identifier_get_type ())
+#define EDWINSPIRE_PDU_IPROTOCOL_IDENTIFIER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_IPROTOCOL_IDENTIFIER, edwinspirePDUIProtocolIdentifier))
+#define EDWINSPIRE_PDU_IS_IPROTOCOL_IDENTIFIER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_IPROTOCOL_IDENTIFIER))
+#define EDWINSPIRE_PDU_IPROTOCOL_IDENTIFIER_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), EDWINSPIRE_PDU_TYPE_IPROTOCOL_IDENTIFIER, edwinspirePDUIProtocolIdentifierIface))
+
+typedef struct _edwinspirePDUIProtocolIdentifier edwinspirePDUIProtocolIdentifier;
+typedef struct _edwinspirePDUIProtocolIdentifierIface edwinspirePDUIProtocolIdentifierIface;
+
+#define EDWINSPIRE_PDU_TYPE_PID_GROUP (edwinspire_pdu_pid_group_get_type ())
+
+#define EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE (edwinspire_pdu_pid_scspecificuse_get_type ())
+#define EDWINSPIRE_PDU_PID_SCSPECIFICUSE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE, edwinspirePDUPID_SCSpecificUse))
+#define EDWINSPIRE_PDU_PID_SCSPECIFICUSE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE, edwinspirePDUPID_SCSpecificUseClass))
+#define EDWINSPIRE_PDU_IS_PID_SCSPECIFICUSE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE))
+#define EDWINSPIRE_PDU_IS_PID_SCSPECIFICUSE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE))
+#define EDWINSPIRE_PDU_PID_SCSPECIFICUSE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_PID_SCSPECIFICUSE, edwinspirePDUPID_SCSpecificUseClass))
+
+typedef struct _edwinspirePDUPID_SCSpecificUse edwinspirePDUPID_SCSpecificUse;
+typedef struct _edwinspirePDUPID_SCSpecificUseClass edwinspirePDUPID_SCSpecificUseClass;
+typedef struct _edwinspirePDUPID_SCSpecificUsePrivate edwinspirePDUPID_SCSpecificUsePrivate;
+
+#define EDWINSPIRE_PDU_TYPE_PID_RESERVED (edwinspire_pdu_pid_reserved_get_type ())
+#define EDWINSPIRE_PDU_PID_RESERVED(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_PID_RESERVED, edwinspirePDUPID_Reserved))
+#define EDWINSPIRE_PDU_PID_RESERVED_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_PID_RESERVED, edwinspirePDUPID_ReservedClass))
+#define EDWINSPIRE_PDU_IS_PID_RESERVED(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_PID_RESERVED))
+#define EDWINSPIRE_PDU_IS_PID_RESERVED_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_PID_RESERVED))
+#define EDWINSPIRE_PDU_PID_RESERVED_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_PID_RESERVED, edwinspirePDUPID_ReservedClass))
+
+typedef struct _edwinspirePDUPID_Reserved edwinspirePDUPID_Reserved;
+typedef struct _edwinspirePDUPID_ReservedClass edwinspirePDUPID_ReservedClass;
+typedef struct _edwinspirePDUPID_ReservedPrivate edwinspirePDUPID_ReservedPrivate;
+
+#define EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE (edwinspire_pdu_pid_messagetype_get_type ())
+#define EDWINSPIRE_PDU_PID_MESSAGETYPE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE, edwinspirePDUPID_MessageType))
+#define EDWINSPIRE_PDU_PID_MESSAGETYPE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE, edwinspirePDUPID_MessageTypeClass))
+#define EDWINSPIRE_PDU_IS_PID_MESSAGETYPE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE))
+#define EDWINSPIRE_PDU_IS_PID_MESSAGETYPE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE))
+#define EDWINSPIRE_PDU_PID_MESSAGETYPE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_PID_MESSAGETYPE, edwinspirePDUPID_MessageTypeClass))
+
+typedef struct _edwinspirePDUPID_MessageType edwinspirePDUPID_MessageType;
+typedef struct _edwinspirePDUPID_MessageTypeClass edwinspirePDUPID_MessageTypeClass;
+typedef struct _edwinspirePDUPID_MessageTypePrivate edwinspirePDUPID_MessageTypePrivate;
+
+#define EDWINSPIRE_PDU_TYPE_PID_SHORT_MESSAGE (edwinspire_pdu_pid_short_message_get_type ())
+
+#define EDWINSPIRE_PDU_TYPE_PID_INTERWORKING (edwinspire_pdu_pid_interworking_get_type ())
+#define EDWINSPIRE_PDU_PID_INTERWORKING(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING, edwinspirePDUPID_InterWorking))
+#define EDWINSPIRE_PDU_PID_INTERWORKING_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING, edwinspirePDUPID_InterWorkingClass))
+#define EDWINSPIRE_PDU_IS_PID_INTERWORKING(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING))
+#define EDWINSPIRE_PDU_IS_PID_INTERWORKING_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING))
+#define EDWINSPIRE_PDU_PID_INTERWORKING_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_PID_INTERWORKING, edwinspirePDUPID_InterWorkingClass))
+
+typedef struct _edwinspirePDUPID_InterWorking edwinspirePDUPID_InterWorking;
+typedef struct _edwinspirePDUPID_InterWorkingClass edwinspirePDUPID_InterWorkingClass;
+typedef struct _edwinspirePDUPID_InterWorkingPrivate edwinspirePDUPID_InterWorkingPrivate;
+
+#define EDWINSPIRE_PDU_TYPE_PID_TYPE_TELEMATIC_DEVICE (edwinspire_pdu_pid_type_telematic_device_get_type ())
+
+#define EDWINSPIRE_PDU_TYPE_DATETIME (edwinspire_pdu_datetime_get_type ())
+#define EDWINSPIRE_PDU_DATETIME(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_DATETIME, edwinspirePDUDatetime))
+#define EDWINSPIRE_PDU_DATETIME_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_DATETIME, edwinspirePDUDatetimeClass))
+#define EDWINSPIRE_PDU_IS_DATETIME(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_DATETIME))
+#define EDWINSPIRE_PDU_IS_DATETIME_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_DATETIME))
+#define EDWINSPIRE_PDU_DATETIME_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_DATETIME, edwinspirePDUDatetimeClass))
+
+typedef struct _edwinspirePDUDatetime edwinspirePDUDatetime;
+typedef struct _edwinspirePDUDatetimeClass edwinspirePDUDatetimeClass;
+typedef struct _edwinspirePDUDatetimePrivate edwinspirePDUDatetimePrivate;
+
+#define EDWINSPIRE_PDU_TYPE_TP_SCTS (edwinspire_pdu_tp_scts_get_type ())
+#define EDWINSPIRE_PDU_TP_SCTS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_TP_SCTS, edwinspirePDUTP_SCTS))
+#define EDWINSPIRE_PDU_TP_SCTS_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_TP_SCTS, edwinspirePDUTP_SCTSClass))
+#define EDWINSPIRE_PDU_IS_TP_SCTS(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_TP_SCTS))
+#define EDWINSPIRE_PDU_IS_TP_SCTS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_TP_SCTS))
+#define EDWINSPIRE_PDU_TP_SCTS_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_TP_SCTS, edwinspirePDUTP_SCTSClass))
+
+typedef struct _edwinspirePDUTP_SCTS edwinspirePDUTP_SCTS;
+typedef struct _edwinspirePDUTP_SCTSClass edwinspirePDUTP_SCTSClass;
+typedef struct _edwinspirePDUTP_SCTSPrivate edwinspirePDUTP_SCTSPrivate;
+
 #define EDWINSPIRE_PDU_TYPE_TYPEADDRESS (edwinspire_pdu_typeaddress_get_type ())
 #define EDWINSPIRE_PDU_TYPEADDRESS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_TYPEADDRESS, edwinspirePDUTYPE_ADDRESS))
 #define EDWINSPIRE_PDU_TYPEADDRESS_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_TYPEADDRESS, edwinspirePDUTYPE_ADDRESSClass))
@@ -252,6 +238,37 @@ typedef struct _edwinspirePDUPDU_PHONEClass edwinspirePDUPDU_PHONEClass;
 typedef struct _edwinspirePDUPHONE_INFORMATION edwinspirePDUPHONE_INFORMATION;
 typedef struct _edwinspirePDUPHONE_INFORMATIONClass edwinspirePDUPHONE_INFORMATIONClass;
 
+#define EDWINSPIRE_PDU_TYPE_VALIDITY_PERIOD_FORMAT (edwinspire_pdu_validity_period_format_get_type ())
+
+#define EDWINSPIRE_PDU_TYPE_DCS_CODING_GROUP_BITS (edwinspire_pdu_dcs_coding_group_bits_get_type ())
+
+#define EDWINSPIRE_PDU_TYPE_STRING_PD_U7_BITS (edwinspire_pdu_string_pd_u7_bits_get_type ())
+typedef struct _edwinspirePDUStringPDU7Bits edwinspirePDUStringPDU7Bits;
+
+#define EDWINSPIRE_PDU_TYPE_TEXT_CONVERT (edwinspire_pdu_text_convert_get_type ())
+#define EDWINSPIRE_PDU_TEXT_CONVERT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT, edwinspirePDUTextConvert))
+#define EDWINSPIRE_PDU_TEXT_CONVERT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT, edwinspirePDUTextConvertClass))
+#define EDWINSPIRE_PDU_IS_TEXT_CONVERT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT))
+#define EDWINSPIRE_PDU_IS_TEXT_CONVERT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT))
+#define EDWINSPIRE_PDU_TEXT_CONVERT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_TEXT_CONVERT, edwinspirePDUTextConvertClass))
+
+typedef struct _edwinspirePDUTextConvert edwinspirePDUTextConvert;
+typedef struct _edwinspirePDUTextConvertClass edwinspirePDUTextConvertClass;
+typedef struct _edwinspirePDUTextConvertPrivate edwinspirePDUTextConvertPrivate;
+
+#define EDWINSPIRE_PDU_TYPE_MISCELLANEOUS (edwinspire_pdu_miscellaneous_get_type ())
+#define EDWINSPIRE_PDU_MISCELLANEOUS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS, edwinspirePDUMiscellaneous))
+#define EDWINSPIRE_PDU_MISCELLANEOUS_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS, edwinspirePDUMiscellaneousClass))
+#define EDWINSPIRE_PDU_IS_MISCELLANEOUS(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS))
+#define EDWINSPIRE_PDU_IS_MISCELLANEOUS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS))
+#define EDWINSPIRE_PDU_MISCELLANEOUS_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_MISCELLANEOUS, edwinspirePDUMiscellaneousClass))
+
+typedef struct _edwinspirePDUMiscellaneous edwinspirePDUMiscellaneous;
+typedef struct _edwinspirePDUMiscellaneousClass edwinspirePDUMiscellaneousClass;
+typedef struct _edwinspirePDUMiscellaneousPrivate edwinspirePDUMiscellaneousPrivate;
+typedef struct _edwinspirePDUPDU_PHONEPrivate edwinspirePDUPDU_PHONEPrivate;
+typedef struct _edwinspirePDUPHONE_INFORMATIONPrivate edwinspirePDUPHONE_INFORMATIONPrivate;
+
 #define EDWINSPIRE_PDU_TYPE_FIRST_OCTET_SUBMIT (edwinspire_pdu_first_octet_submit_get_type ())
 #define EDWINSPIRE_PDU_FIRST_OCTET_SUBMIT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_FIRST_OCTET_SUBMIT, edwinspirePDUFIRST_OCTET_SUBMIT))
 #define EDWINSPIRE_PDU_FIRST_OCTET_SUBMIT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_FIRST_OCTET_SUBMIT, edwinspirePDUFIRST_OCTET_SUBMITClass))
@@ -262,8 +279,6 @@ typedef struct _edwinspirePDUPHONE_INFORMATIONClass edwinspirePDUPHONE_INFORMATI
 typedef struct _edwinspirePDUFIRST_OCTET_SUBMIT edwinspirePDUFIRST_OCTET_SUBMIT;
 typedef struct _edwinspirePDUFIRST_OCTET_SUBMITClass edwinspirePDUFIRST_OCTET_SUBMITClass;
 typedef struct _edwinspirePDUFIRST_OCTET_SUBMITPrivate edwinspirePDUFIRST_OCTET_SUBMITPrivate;
-
-#define EDWINSPIRE_PDU_TYPE_VALIDITY_PERIOD_FORMAT (edwinspire_pdu_validity_period_format_get_type ())
 
 #define EDWINSPIRE_PDU_TYPE_SUBMIT (edwinspire_pdu_submit_get_type ())
 #define EDWINSPIRE_PDU_SUBMIT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_SUBMIT, edwinspirePDUSUBMIT))
@@ -286,16 +301,6 @@ typedef struct _edwinspirePDUSUBMITPrivate edwinspirePDUSUBMITPrivate;
 typedef struct _edwinspirePDUVALIDITY_PERIOD edwinspirePDUVALIDITY_PERIOD;
 typedef struct _edwinspirePDUVALIDITY_PERIODClass edwinspirePDUVALIDITY_PERIODClass;
 
-#define EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT (edwinspire_pdu_text_pdu_text_get_type ())
-#define EDWINSPIRE_PDU_TEXT_PDU_TEXT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT, edwinspirePDUTextPDUText))
-#define EDWINSPIRE_PDU_TEXT_PDU_TEXT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT, edwinspirePDUTextPDUTextClass))
-#define EDWINSPIRE_PDU_IS_TEXT_PDU_TEXT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT))
-#define EDWINSPIRE_PDU_IS_TEXT_PDU_TEXT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT))
-#define EDWINSPIRE_PDU_TEXT_PDU_TEXT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EDWINSPIRE_PDU_TYPE_TEXT_PDU_TEXT, edwinspirePDUTextPDUTextClass))
-
-typedef struct _edwinspirePDUTextPDUText edwinspirePDUTextPDUText;
-typedef struct _edwinspirePDUTextPDUTextClass edwinspirePDUTextPDUTextClass;
-
 #define EDWINSPIRE_PDU_TYPE_SUBMI_TWITH_DCS_GENERAL_DATA_CODING_INDICATION (edwinspire_pdu_submi_twith_dcs_general_data_coding_indication_get_type ())
 #define EDWINSPIRE_PDU_SUBMI_TWITH_DCS_GENERAL_DATA_CODING_INDICATION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EDWINSPIRE_PDU_TYPE_SUBMI_TWITH_DCS_GENERAL_DATA_CODING_INDICATION, edwinspirePDUSUBMITwithDCSGeneralDataCodingIndication))
 #define EDWINSPIRE_PDU_SUBMI_TWITH_DCS_GENERAL_DATA_CODING_INDICATION_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EDWINSPIRE_PDU_TYPE_SUBMI_TWITH_DCS_GENERAL_DATA_CODING_INDICATION, edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationClass))
@@ -306,79 +311,7 @@ typedef struct _edwinspirePDUTextPDUTextClass edwinspirePDUTextPDUTextClass;
 typedef struct _edwinspirePDUSUBMITwithDCSGeneralDataCodingIndication edwinspirePDUSUBMITwithDCSGeneralDataCodingIndication;
 typedef struct _edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationClass edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationClass;
 typedef struct _edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationPrivate edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationPrivate;
-typedef struct _edwinspirePDUPDU_PHONEPrivate edwinspirePDUPDU_PHONEPrivate;
-typedef struct _edwinspirePDUPHONE_INFORMATIONPrivate edwinspirePDUPHONE_INFORMATIONPrivate;
 typedef struct _edwinspirePDUVALIDITY_PERIODPrivate edwinspirePDUVALIDITY_PERIODPrivate;
-
-#define EDWINSPIRE_PDU_TYPE_DCS_CODING_GROUP_BITS (edwinspire_pdu_dcs_coding_group_bits_get_type ())
-typedef struct _edwinspirePDUTextPDUTextPrivate edwinspirePDUTextPDUTextPrivate;
-
-struct _edwinspirePDUStringPDU7Bits {
-	gint Length;
-	gchar* PDU;
-};
-
-struct _edwinspirePDUDatetime {
-	GObject parent_instance;
-	edwinspirePDUDatetimePrivate * priv;
-};
-
-struct _edwinspirePDUDatetimeClass {
-	GObjectClass parent_class;
-};
-
-struct _edwinspirePDUTextConvert {
-	GObject parent_instance;
-	edwinspirePDUTextConvertPrivate * priv;
-};
-
-struct _edwinspirePDUTextConvertClass {
-	GObjectClass parent_class;
-};
-
-typedef enum  {
-	EDWINSPIRE_PDU_PDU_ALPHABET_DEFAULT,
-	EDWINSPIRE_PDU_PDU_ALPHABET_DATA8Bits,
-	EDWINSPIRE_PDU_PDU_ALPHABET_UCS2,
-	EDWINSPIRE_PDU_PDU_ALPHABET_RESERVED,
-	EDWINSPIRE_PDU_PDU_ALPHABET_UNKNOW
-} edwinspirePDUPDU_ALPHABET;
-
-struct _edwinspirePDUMiscellaneous {
-	GObject parent_instance;
-	edwinspirePDUMiscellaneousPrivate * priv;
-};
-
-struct _edwinspirePDUMiscellaneousClass {
-	GObjectClass parent_class;
-};
-
-struct _edwinspirePDUTP_SCTS {
-	edwinspirePDUDatetime parent_instance;
-	edwinspirePDUTP_SCTSPrivate * priv;
-};
-
-struct _edwinspirePDUTP_SCTSClass {
-	edwinspirePDUDatetimeClass parent_class;
-};
-
-struct _edwinspirePDUIProtocolIdentifierIface {
-	GTypeInterface parent_iface;
-	void (*Encode) (edwinspirePDUIProtocolIdentifier* self);
-	void (*Decode) (edwinspirePDUIProtocolIdentifier* self);
-	void (*print_values) (edwinspirePDUIProtocolIdentifier* self);
-	gboolean (*get_decoding) (edwinspirePDUIProtocolIdentifier* self);
-	void (*set_decoding) (edwinspirePDUIProtocolIdentifier* self, gboolean value);
-	gboolean (*get_encoding) (edwinspirePDUIProtocolIdentifier* self);
-	void (*set_encoding) (edwinspirePDUIProtocolIdentifier* self, gboolean value);
-};
-
-typedef enum  {
-	EDWINSPIRE_PDU_PID_GROUP_Group0,
-	EDWINSPIRE_PDU_PID_GROUP_Group1,
-	EDWINSPIRE_PDU_PID_GROUP_Reserved,
-	EDWINSPIRE_PDU_PID_GROUP_SCSpecificUse
-} edwinspirePDUPID_GROUP;
 
 struct _edwinspirePDUOctet {
 	GObject parent_instance;
@@ -391,82 +324,22 @@ struct _edwinspirePDUOctetClass {
 	GObjectClass parent_class;
 };
 
-struct _edwinspirePDUPID_SCSpecificUse {
-	edwinspirePDUOctet parent_instance;
-	edwinspirePDUPID_SCSpecificUsePrivate * priv;
+struct _edwinspirePDUTextPDUText {
+	GObject parent_instance;
+	edwinspirePDUTextPDUTextPrivate * priv;
 };
 
-struct _edwinspirePDUPID_SCSpecificUseClass {
-	edwinspirePDUOctetClass parent_class;
-};
-
-struct _edwinspirePDUPID_Reserved {
-	edwinspirePDUOctet parent_instance;
-	edwinspirePDUPID_ReservedPrivate * priv;
-};
-
-struct _edwinspirePDUPID_ReservedClass {
-	edwinspirePDUOctetClass parent_class;
-};
-
-struct _edwinspirePDUPID_MessageType {
-	edwinspirePDUOctet parent_instance;
-	edwinspirePDUPID_MessageTypePrivate * priv;
-};
-
-struct _edwinspirePDUPID_MessageTypeClass {
-	edwinspirePDUOctetClass parent_class;
+struct _edwinspirePDUTextPDUTextClass {
+	GObjectClass parent_class;
 };
 
 typedef enum  {
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_SHORT_MESSAGE_TYPE_0 = 0,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_1 = 1,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_2 = 2,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_3 = 3,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_4 = 4,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_5 = 5,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_6 = 6,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_7 = 7,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_RESERVED = 8,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_RETURN_CALL_MESSAGE = 31,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_ME_DATA_DOWNLOAD = 32,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_ME_DEPERSONALIZATION_SHORT_MESSAGE = 62,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_SIM_DATA_DOWNLOAD = 63,
-	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_UNKNOW = 64
-} edwinspirePDUPID_SHORT_MESSAGE;
-
-struct _edwinspirePDUPID_InterWorking {
-	edwinspirePDUOctet parent_instance;
-	edwinspirePDUPID_InterWorkingPrivate * priv;
-};
-
-struct _edwinspirePDUPID_InterWorkingClass {
-	edwinspirePDUOctetClass parent_class;
-};
-
-typedef enum  {
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_IMPLICIT = 0,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELEX = 1,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELEFAX_GROUP3 = 2,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELEFAX_GROUP4 = 3,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_VOICE_TELEPHONE = 4,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_ERMES = 5,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_NATIONAL_PAGING_SYSTEM = 6,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_VIDEOTEX = 7,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_CARRIER_UNSPECIFIED = 8,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_PSPDN = 9,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_CSPDN = 10,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_PSTN = 11,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_ISDN = 12,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_UCI = 13,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_RESERVED = 14,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_MESSAGE_HANDLING_FACILITY = 16,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_ANY_PUBLIC_X400_MESSAGE_HANDLING_SYSTEM = 17,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_INTERNET_ELECTRONIC_MAIL = 18,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_VALUES_SPECIFIC_TO_EACH_SC = 24,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_A_GSM_MOBILE_STATION = 31,
-	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_UNKNOW = 32
-} edwinspirePDUPID_TYPE_TELEMATIC_DEVICE;
+	EDWINSPIRE_PDU_PDU_ALPHABET_DEFAULT,
+	EDWINSPIRE_PDU_PDU_ALPHABET_DATA8Bits,
+	EDWINSPIRE_PDU_PDU_ALPHABET_UCS2,
+	EDWINSPIRE_PDU_PDU_ALPHABET_RESERVED,
+	EDWINSPIRE_PDU_PDU_ALPHABET_UNKNOW
+} edwinspirePDUPDU_ALPHABET;
 
 struct _edwinspirePDUIDataCodingSchemeIface {
 	GTypeInterface parent_iface;
@@ -551,6 +424,119 @@ struct _edwinspirePDUDCS_ReservedClass {
 	edwinspirePDUOctetClass parent_class;
 };
 
+struct _edwinspirePDUIProtocolIdentifierIface {
+	GTypeInterface parent_iface;
+	void (*Encode) (edwinspirePDUIProtocolIdentifier* self);
+	void (*Decode) (edwinspirePDUIProtocolIdentifier* self);
+	void (*print_values) (edwinspirePDUIProtocolIdentifier* self);
+	gboolean (*get_decoding) (edwinspirePDUIProtocolIdentifier* self);
+	void (*set_decoding) (edwinspirePDUIProtocolIdentifier* self, gboolean value);
+	gboolean (*get_encoding) (edwinspirePDUIProtocolIdentifier* self);
+	void (*set_encoding) (edwinspirePDUIProtocolIdentifier* self, gboolean value);
+};
+
+typedef enum  {
+	EDWINSPIRE_PDU_PID_GROUP_Group0,
+	EDWINSPIRE_PDU_PID_GROUP_Group1,
+	EDWINSPIRE_PDU_PID_GROUP_Reserved,
+	EDWINSPIRE_PDU_PID_GROUP_SCSpecificUse
+} edwinspirePDUPID_GROUP;
+
+struct _edwinspirePDUPID_SCSpecificUse {
+	edwinspirePDUOctet parent_instance;
+	edwinspirePDUPID_SCSpecificUsePrivate * priv;
+};
+
+struct _edwinspirePDUPID_SCSpecificUseClass {
+	edwinspirePDUOctetClass parent_class;
+};
+
+struct _edwinspirePDUPID_Reserved {
+	edwinspirePDUOctet parent_instance;
+	edwinspirePDUPID_ReservedPrivate * priv;
+};
+
+struct _edwinspirePDUPID_ReservedClass {
+	edwinspirePDUOctetClass parent_class;
+};
+
+struct _edwinspirePDUPID_MessageType {
+	edwinspirePDUOctet parent_instance;
+	edwinspirePDUPID_MessageTypePrivate * priv;
+};
+
+struct _edwinspirePDUPID_MessageTypeClass {
+	edwinspirePDUOctetClass parent_class;
+};
+
+typedef enum  {
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_SHORT_MESSAGE_TYPE_0 = 0,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_1 = 1,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_2 = 2,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_3 = 3,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_4 = 4,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_5 = 5,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_6 = 6,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_REPLACE_SHORT_MESSAGE_TYPE_7 = 7,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_RESERVED = 8,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_RETURN_CALL_MESSAGE = 31,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_ME_DATA_DOWNLOAD = 32,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_ME_DEPERSONALIZATION_SHORT_MESSAGE = 62,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_SIM_DATA_DOWNLOAD = 63,
+	EDWINSPIRE_PDU_PID_SHORT_MESSAGE_UNKNOW = 64
+} edwinspirePDUPID_SHORT_MESSAGE;
+
+struct _edwinspirePDUPID_InterWorking {
+	edwinspirePDUOctet parent_instance;
+	edwinspirePDUPID_InterWorkingPrivate * priv;
+};
+
+struct _edwinspirePDUPID_InterWorkingClass {
+	edwinspirePDUOctetClass parent_class;
+};
+
+typedef enum  {
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_IMPLICIT = 0,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELEX = 1,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELEFAX_GROUP3 = 2,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELEFAX_GROUP4 = 3,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_VOICE_TELEPHONE = 4,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_ERMES = 5,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_NATIONAL_PAGING_SYSTEM = 6,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_VIDEOTEX = 7,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_CARRIER_UNSPECIFIED = 8,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_PSPDN = 9,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_CSPDN = 10,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_PSTN = 11,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_TELETEX_ISDN = 12,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_UCI = 13,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_RESERVED = 14,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_MESSAGE_HANDLING_FACILITY = 16,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_ANY_PUBLIC_X400_MESSAGE_HANDLING_SYSTEM = 17,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_INTERNET_ELECTRONIC_MAIL = 18,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_VALUES_SPECIFIC_TO_EACH_SC = 24,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_A_GSM_MOBILE_STATION = 31,
+	EDWINSPIRE_PDU_PID_TYPE_TELEMATIC_DEVICE_UNKNOW = 32
+} edwinspirePDUPID_TYPE_TELEMATIC_DEVICE;
+
+struct _edwinspirePDUDatetime {
+	GObject parent_instance;
+	edwinspirePDUDatetimePrivate * priv;
+};
+
+struct _edwinspirePDUDatetimeClass {
+	GObjectClass parent_class;
+};
+
+struct _edwinspirePDUTP_SCTS {
+	edwinspirePDUDatetime parent_instance;
+	edwinspirePDUTP_SCTSPrivate * priv;
+};
+
+struct _edwinspirePDUTP_SCTSClass {
+	edwinspirePDUDatetimeClass parent_class;
+};
+
 struct _edwinspirePDUTYPE_ADDRESS {
 	edwinspirePDUOctet parent_instance;
 	edwinspirePDUTYPE_ADDRESSPrivate * priv;
@@ -607,15 +593,6 @@ struct _edwinspirePDUDELIVERClass {
 	GObjectClass parent_class;
 };
 
-struct _edwinspirePDUFIRST_OCTET_SUBMIT {
-	edwinspirePDUOctet parent_instance;
-	edwinspirePDUFIRST_OCTET_SUBMITPrivate * priv;
-};
-
-struct _edwinspirePDUFIRST_OCTET_SUBMITClass {
-	edwinspirePDUOctetClass parent_class;
-};
-
 typedef enum  {
 	EDWINSPIRE_PDU_VALIDITY_PERIOD_FORMAT_NO_PRESENT,
 	EDWINSPIRE_PDU_VALIDITY_PERIOD_FORMAT_ENHANCED,
@@ -623,22 +600,36 @@ typedef enum  {
 	EDWINSPIRE_PDU_VALIDITY_PERIOD_FORMAT_ABSOLUTE
 } edwinspirePDUVALIDITY_PERIOD_FORMAT;
 
-struct _edwinspirePDUSUBMIT {
-	GObject parent_instance;
-	edwinspirePDUSUBMITPrivate * priv;
+typedef enum  {
+	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_GENERAL_DATA_CODING,
+	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_RESERVED,
+	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_MESSAGE_WAIT_DISCARD_MESSAGE,
+	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_MESSAGE_WAIT_STORE_MESSAGE_DEFAULT,
+	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_MESSAGE_WAIT_STORE_MESSAGE_UCS2,
+	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_DATA_CODING
+} edwinspirePDUDCS_CODING_GROUP_BITS;
+
+struct _edwinspirePDUStringPDU7Bits {
+	gint Length;
+	gchar* PDU;
 };
 
-struct _edwinspirePDUSUBMITClass {
+struct _edwinspirePDUTextConvert {
+	GObject parent_instance;
+	edwinspirePDUTextConvertPrivate * priv;
+};
+
+struct _edwinspirePDUTextConvertClass {
 	GObjectClass parent_class;
 };
 
-struct _edwinspirePDUSUBMITwithDCSGeneralDataCodingIndication {
-	edwinspirePDUSUBMIT parent_instance;
-	edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationPrivate * priv;
+struct _edwinspirePDUMiscellaneous {
+	GObject parent_instance;
+	edwinspirePDUMiscellaneousPrivate * priv;
 };
 
-struct _edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationClass {
-	edwinspirePDUSUBMITClass parent_class;
+struct _edwinspirePDUMiscellaneousClass {
+	GObjectClass parent_class;
 };
 
 struct _edwinspirePDUPDU_PHONE {
@@ -659,6 +650,33 @@ struct _edwinspirePDUPHONE_INFORMATIONClass {
 	edwinspirePDUPDU_PHONEClass parent_class;
 };
 
+struct _edwinspirePDUFIRST_OCTET_SUBMIT {
+	edwinspirePDUOctet parent_instance;
+	edwinspirePDUFIRST_OCTET_SUBMITPrivate * priv;
+};
+
+struct _edwinspirePDUFIRST_OCTET_SUBMITClass {
+	edwinspirePDUOctetClass parent_class;
+};
+
+struct _edwinspirePDUSUBMIT {
+	GObject parent_instance;
+	edwinspirePDUSUBMITPrivate * priv;
+};
+
+struct _edwinspirePDUSUBMITClass {
+	GObjectClass parent_class;
+};
+
+struct _edwinspirePDUSUBMITwithDCSGeneralDataCodingIndication {
+	edwinspirePDUSUBMIT parent_instance;
+	edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationPrivate * priv;
+};
+
+struct _edwinspirePDUSUBMITwithDCSGeneralDataCodingIndicationClass {
+	edwinspirePDUSUBMITClass parent_class;
+};
+
 struct _edwinspirePDUVALIDITY_PERIOD {
 	GObject parent_instance;
 	edwinspirePDUVALIDITY_PERIODPrivate * priv;
@@ -668,32 +686,148 @@ struct _edwinspirePDUVALIDITY_PERIODClass {
 	GObjectClass parent_class;
 };
 
-typedef enum  {
-	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_GENERAL_DATA_CODING,
-	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_RESERVED,
-	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_MESSAGE_WAIT_DISCARD_MESSAGE,
-	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_MESSAGE_WAIT_STORE_MESSAGE_DEFAULT,
-	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_MESSAGE_WAIT_STORE_MESSAGE_UCS2,
-	EDWINSPIRE_PDU_DCS_CODING_GROUP_BITS_DATA_CODING
-} edwinspirePDUDCS_CODING_GROUP_BITS;
 
-struct _edwinspirePDUTextPDUText {
-	GObject parent_instance;
-	edwinspirePDUTextPDUTextPrivate * priv;
-};
-
-struct _edwinspirePDUTextPDUTextClass {
-	GObjectClass parent_class;
-};
-
-
+GType edwinspire_pdu_octet_get_type (void) G_GNUC_CONST;
+edwinspirePDUOctet* edwinspire_pdu_octet_new (gint dec);
+edwinspirePDUOctet* edwinspire_pdu_octet_construct (GType object_type, gint dec);
+edwinspirePDUOctet* edwinspire_pdu_octet_new_from_hex (const gchar* hex);
+edwinspirePDUOctet* edwinspire_pdu_octet_construct_from_hex (GType object_type, const gchar* hex);
+edwinspirePDUOctet* edwinspire_pdu_octet_new_from_Bin (const gchar* bin);
+edwinspirePDUOctet* edwinspire_pdu_octet_construct_from_Bin (GType object_type, const gchar* bin);
+const gchar* edwinspire_pdu_octet_get_Hex (edwinspirePDUOctet* self);
+void edwinspire_pdu_octet_set_Hex (edwinspirePDUOctet* self, const gchar* value);
+gint edwinspire_pdu_octet_get_Dec (edwinspirePDUOctet* self);
+void edwinspire_pdu_octet_set_Dec (edwinspirePDUOctet* self, gint value);
+const gchar* edwinspire_pdu_octet_get_Bin (edwinspirePDUOctet* self);
+void edwinspire_pdu_octet_set_Bin (edwinspirePDUOctet* self, const gchar* value);
+GType edwinspire_pdu_text_pdu_text_get_type (void) G_GNUC_CONST;
+edwinspirePDUTextPDUText* edwinspire_pdu_text_pdu_text_new (void);
+edwinspirePDUTextPDUText* edwinspire_pdu_text_pdu_text_construct (GType object_type);
+void edwinspire_pdu_text_pdu_text_print_values (edwinspirePDUTextPDUText* self);
+GType edwinspire_pdu_pdu_alphabet_get_type (void) G_GNUC_CONST;
+gchar* edwinspire_pdu_text_pdu_text_ToTXT (edwinspirePDUTextPDUText* self, const gchar* pdu, edwinspirePDUPDU_ALPHABET Alp);
+gchar* edwinspire_pdu_text_pdu_text_ToPDU (edwinspirePDUTextPDUText* self, const gchar* txt, edwinspirePDUPDU_ALPHABET Alp);
+gint edwinspire_pdu_text_pdu_text_CountUnichars (const gchar* text);
+edwinspirePDUPDU_ALPHABET edwinspire_pdu_text_pdu_text_get_Alphabet (edwinspirePDUTextPDUText* self);
+void edwinspire_pdu_text_pdu_text_set_Alphabet (edwinspirePDUTextPDUText* self, edwinspirePDUPDU_ALPHABET value);
+const gchar* edwinspire_pdu_text_pdu_text_get_TXT (edwinspirePDUTextPDUText* self);
+void edwinspire_pdu_text_pdu_text_set_TXT (edwinspirePDUTextPDUText* self, const gchar* value);
+const gchar* edwinspire_pdu_text_pdu_text_get_PDU (edwinspirePDUTextPDUText* self);
+void edwinspire_pdu_text_pdu_text_set_PDU (edwinspirePDUTextPDUText* self, const gchar* value);
+edwinspirePDUOctet* edwinspire_pdu_text_pdu_text_get_UDL (edwinspirePDUTextPDUText* self);
+GType edwinspire_pdu_idata_coding_scheme_get_type (void) G_GNUC_CONST;
+GType edwinspire_pdu_idata_coding_scheme_DecodeGroup (const gchar* Bin);
+void edwinspire_pdu_idata_coding_scheme_OnChangeProperty (edwinspirePDUIDataCodingScheme* self, const gchar* propertyname);
+void edwinspire_pdu_idata_coding_scheme_print_values (edwinspirePDUIDataCodingScheme* self);
+edwinspirePDUPDU_ALPHABET edwinspire_pdu_idata_coding_scheme_get_Alpha (edwinspirePDUIDataCodingScheme* self);
+void edwinspire_pdu_idata_coding_scheme_set_Alpha (edwinspirePDUIDataCodingScheme* self, edwinspirePDUPDU_ALPHABET value);
+GType edwinspire_pdu_dcs_generaldatacodingindication_get_type (void) G_GNUC_CONST;
+GType edwinspire_pdu_dcs_message_class_get_type (void) G_GNUC_CONST;
+edwinspirePDUDCS_GeneralDataCodingIndication* edwinspire_pdu_dcs_generaldatacodingindication_new (void);
+edwinspirePDUDCS_GeneralDataCodingIndication* edwinspire_pdu_dcs_generaldatacodingindication_construct (GType object_type);
+GType edwinspire_pdu_dcs_messagewaitingindicationgroup_get_type (void) G_GNUC_CONST;
+GType edwinspire_pdu_dcs_indication_type_get_type (void) G_GNUC_CONST;
+GType edwinspire_pdu_dcs_message_waiting_indication_group_get_type (void) G_GNUC_CONST;
+edwinspirePDUDCS_MessageWaitingIndicationGroup* edwinspire_pdu_dcs_messagewaitingindicationgroup_new (void);
+edwinspirePDUDCS_MessageWaitingIndicationGroup* edwinspire_pdu_dcs_messagewaitingindicationgroup_construct (GType object_type);
+GType edwinspire_pdu_dcs_datacodingmessageclass_get_type (void) G_GNUC_CONST;
+GType edwinspire_pdu_dcs_messagecoding_get_type (void) G_GNUC_CONST;
+edwinspirePDUDCS_DataCodingMessageClass* edwinspire_pdu_dcs_datacodingmessageclass_new (void);
+edwinspirePDUDCS_DataCodingMessageClass* edwinspire_pdu_dcs_datacodingmessageclass_construct (GType object_type);
+GType edwinspire_pdu_dcs_reserved_get_type (void) G_GNUC_CONST;
+edwinspirePDUDCS_Reserved* edwinspire_pdu_dcs_reserved_new (void);
+edwinspirePDUDCS_Reserved* edwinspire_pdu_dcs_reserved_construct (GType object_type);
+GType edwinspire_pdu_iprotocol_identifier_get_type (void) G_GNUC_CONST;
+GType edwinspire_pdu_pid_group_get_type (void) G_GNUC_CONST;
+edwinspirePDUPID_GROUP edwinspire_pdu_iprotocol_identifier_DecodeGroup (const gchar* hex);
+void edwinspire_pdu_iprotocol_identifier_OnChangeProperty (edwinspirePDUIProtocolIdentifier* self, const gchar* propertyname);
+void edwinspire_pdu_iprotocol_identifier_print_values (edwinspirePDUIProtocolIdentifier* self);
+GType edwinspire_pdu_pid_scspecificuse_get_type (void) G_GNUC_CONST;
+edwinspirePDUPID_SCSpecificUse* edwinspire_pdu_pid_scspecificuse_new (void);
+edwinspirePDUPID_SCSpecificUse* edwinspire_pdu_pid_scspecificuse_construct (GType object_type);
+GType edwinspire_pdu_pid_reserved_get_type (void) G_GNUC_CONST;
+edwinspirePDUPID_Reserved* edwinspire_pdu_pid_reserved_new (void);
+edwinspirePDUPID_Reserved* edwinspire_pdu_pid_reserved_construct (GType object_type);
+GType edwinspire_pdu_pid_messagetype_get_type (void) G_GNUC_CONST;
+edwinspirePDUPID_MessageType* edwinspire_pdu_pid_messagetype_new (void);
+edwinspirePDUPID_MessageType* edwinspire_pdu_pid_messagetype_construct (GType object_type);
+GType edwinspire_pdu_pid_short_message_get_type (void) G_GNUC_CONST;
+edwinspirePDUPID_SHORT_MESSAGE edwinspire_pdu_pid_messagetype_get_Message (edwinspirePDUPID_MessageType* self);
+void edwinspire_pdu_pid_messagetype_set_Message (edwinspirePDUPID_MessageType* self, edwinspirePDUPID_SHORT_MESSAGE value);
+GType edwinspire_pdu_pid_interworking_get_type (void) G_GNUC_CONST;
+edwinspirePDUPID_InterWorking* edwinspire_pdu_pid_interworking_new (void);
+edwinspirePDUPID_InterWorking* edwinspire_pdu_pid_interworking_construct (GType object_type);
+GType edwinspire_pdu_pid_type_telematic_device_get_type (void) G_GNUC_CONST;
+edwinspirePDUPID_TYPE_TELEMATIC_DEVICE edwinspire_pdu_pid_interworking_get_InterworkingDevice (edwinspirePDUPID_InterWorking* self);
+void edwinspire_pdu_pid_interworking_set_InterworkingDevice (edwinspirePDUPID_InterWorking* self, edwinspirePDUPID_TYPE_TELEMATIC_DEVICE value);
+gboolean edwinspire_pdu_pid_interworking_get_TelematicInterWorking (edwinspirePDUPID_InterWorking* self);
+void edwinspire_pdu_pid_interworking_set_TelematicInterWorking (edwinspirePDUPID_InterWorking* self, gboolean value);
+GType edwinspire_pdu_datetime_get_type (void) G_GNUC_CONST;
+GType edwinspire_pdu_tp_scts_get_type (void) G_GNUC_CONST;
+edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_new (GTimeZone* tz, gint year, gint month, gint day, gint hour, gint minute, gdouble seconds);
+edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_construct (GType object_type, GTimeZone* tz, gint year, gint month, gint day, gint hour, gint minute, gdouble seconds);
+edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_new_from_octets (const gchar* octets);
+edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_construct_from_octets (GType object_type, const gchar* octets);
+edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_new_now_local (void);
+edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_construct_now_local (GType object_type);
+edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_new_from_values (gint year, gint month, gint day, gint hour, gint minute, gdouble seconds, gint gmt);
+edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_construct_from_values (GType object_type, gint year, gint month, gint day, gint hour, gint minute, gdouble seconds, gint gmt);
+void edwinspire_pdu_tp_scts_print_values (edwinspirePDUTP_SCTS* self);
+const gchar* edwinspire_pdu_tp_scts_get_Octets (edwinspirePDUTP_SCTS* self);
+void edwinspire_pdu_tp_scts_set_Octets (edwinspirePDUTP_SCTS* self, const gchar* value);
+GType edwinspire_pdu_typeaddress_get_type (void) G_GNUC_CONST;
+edwinspirePDUTYPE_ADDRESS* edwinspire_pdu_typeaddress_new (void);
+edwinspirePDUTYPE_ADDRESS* edwinspire_pdu_typeaddress_construct (GType object_type);
+void edwinspire_pdu_typeaddress_print_values (edwinspirePDUTYPE_ADDRESS* self);
+GType edwinspire_pdu_numbering_plan_identification_get_type (void) G_GNUC_CONST;
+edwinspirePDUNUMBERING_PLAN_IDENTIFICATION edwinspire_pdu_typeaddress_get_NPI (edwinspirePDUTYPE_ADDRESS* self);
+void edwinspire_pdu_typeaddress_set_NPI (edwinspirePDUTYPE_ADDRESS* self, edwinspirePDUNUMBERING_PLAN_IDENTIFICATION value);
+GType edwinspire_pdu_type_of_number_get_type (void) G_GNUC_CONST;
+edwinspirePDUTYPE_OF_NUMBER edwinspire_pdu_typeaddress_get_TON (edwinspirePDUTYPE_ADDRESS* self);
+void edwinspire_pdu_typeaddress_set_TON (edwinspirePDUTYPE_ADDRESS* self, edwinspirePDUTYPE_OF_NUMBER value);
+GType edwinspire_pdu_first_octet_deliver_get_type (void) G_GNUC_CONST;
+edwinspirePDUFIRST_OCTET_DELIVER* edwinspire_pdu_first_octet_deliver_new (void);
+edwinspirePDUFIRST_OCTET_DELIVER* edwinspire_pdu_first_octet_deliver_construct (GType object_type);
+void edwinspire_pdu_first_octet_deliver_print_values (edwinspirePDUFIRST_OCTET_DELIVER* self);
+gboolean edwinspire_pdu_first_octet_deliver_get_TP_RP (edwinspirePDUFIRST_OCTET_DELIVER* self);
+gboolean edwinspire_pdu_first_octet_deliver_get_TP_UDHI (edwinspirePDUFIRST_OCTET_DELIVER* self);
+gboolean edwinspire_pdu_first_octet_deliver_get_TP_SRI (edwinspirePDUFIRST_OCTET_DELIVER* self);
+gboolean edwinspire_pdu_first_octet_deliver_get_TP_MMS (edwinspirePDUFIRST_OCTET_DELIVER* self);
+GType edwinspire_pdu_message_type_indicator_get_type (void) G_GNUC_CONST;
+edwinspirePDUMESSAGE_TYPE_INDICATOR edwinspire_pdu_first_octet_deliver_get_TP_MTI (edwinspirePDUFIRST_OCTET_DELIVER* self);
+GType edwinspire_pdu_deliver_get_type (void) G_GNUC_CONST;
+edwinspirePDUDELIVER* edwinspire_pdu_deliver_new (void);
+edwinspirePDUDELIVER* edwinspire_pdu_deliver_construct (GType object_type);
+void edwinspire_pdu_deliver_print_values (edwinspirePDUDELIVER* self);
+void edwinspire_pdu_deliver_DECODE (edwinspirePDUDELIVER* self, const gchar* PDU);
+GType edwinspire_pdu_pdu_phone_get_type (void) G_GNUC_CONST;
+GType edwinspire_pdu_phone_information_get_type (void) G_GNUC_CONST;
+edwinspirePDUPHONE_INFORMATION* edwinspire_pdu_deliver_get_SMSC (edwinspirePDUDELIVER* self);
+edwinspirePDUFIRST_OCTET_DELIVER* edwinspire_pdu_deliver_get_FO (edwinspirePDUDELIVER* self);
+edwinspirePDUPHONE_INFORMATION* edwinspire_pdu_deliver_get_Sender (edwinspirePDUDELIVER* self);
+edwinspirePDUIProtocolIdentifier* edwinspire_pdu_deliver_get_PID (edwinspirePDUDELIVER* self);
+edwinspirePDUIDataCodingScheme* edwinspire_pdu_deliver_get_DCS (edwinspirePDUDELIVER* self);
+edwinspirePDUTP_SCTS* edwinspire_pdu_deliver_get_SCTS (edwinspirePDUDELIVER* self);
+edwinspirePDUOctet* edwinspire_pdu_deliver_get_UDL (edwinspirePDUDELIVER* self);
+const gchar* edwinspire_pdu_deliver_get_Message (edwinspirePDUDELIVER* self);
+gchar* edwinspire_pdu_type_of_number_ToBin (edwinspirePDUTYPE_OF_NUMBER self);
+gchar* edwinspire_pdu_numbering_plan_identification_ToBin (edwinspirePDUNUMBERING_PLAN_IDENTIFICATION self);
+GType edwinspire_pdu_validity_period_format_get_type (void) G_GNUC_CONST;
+gchar* edwinspire_pdu_validity_period_format_ToBin (edwinspirePDUVALIDITY_PERIOD_FORMAT self);
+gchar* edwinspire_pdu_pid_type_telematic_device_ToBin (edwinspirePDUPID_TYPE_TELEMATIC_DEVICE self);
+gchar* edwinspire_pdu_message_type_indicator_ToBin (edwinspirePDUMESSAGE_TYPE_INDICATOR self);
+gchar* edwinspire_pdu_pid_short_message_ToBin (edwinspirePDUPID_SHORT_MESSAGE self);
+gchar* edwinspire_pdu_pdu_alphabet_ToBin (edwinspirePDUPDU_ALPHABET self);
+gchar* edwinspire_pdu_dcs_message_class_ToBin (edwinspirePDUDCS_MESSAGE_CLASS self);
+gchar* edwinspire_pdu_dcs_message_waiting_indication_group_ToBin (edwinspirePDUDCS_MESSAGE_WAITING_INDICATION_GROUP self);
+gchar* edwinspire_pdu_dcs_indication_type_ToBin (edwinspirePDUDCS_INDICATION_TYPE self);
+GType edwinspire_pdu_dcs_coding_group_bits_get_type (void) G_GNUC_CONST;
 GType edwinspire_pdu_string_pd_u7_bits_get_type (void) G_GNUC_CONST;
 edwinspirePDUStringPDU7Bits* edwinspire_pdu_string_pd_u7_bits_dup (const edwinspirePDUStringPDU7Bits* self);
 void edwinspire_pdu_string_pd_u7_bits_free (edwinspirePDUStringPDU7Bits* self);
 void edwinspire_pdu_string_pd_u7_bits_copy (const edwinspirePDUStringPDU7Bits* self, edwinspirePDUStringPDU7Bits* dest);
 void edwinspire_pdu_string_pd_u7_bits_destroy (edwinspirePDUStringPDU7Bits* self);
 void edwinspire_pdu_string_pd_u7_bits_init (edwinspirePDUStringPDU7Bits *self);
-GType edwinspire_pdu_datetime_get_type (void) G_GNUC_CONST;
 edwinspirePDUDatetime* edwinspire_pdu_datetime_new_now (GTimeZone* tz);
 edwinspirePDUDatetime* edwinspire_pdu_datetime_construct_now (GType object_type, GTimeZone* tz);
 edwinspirePDUDatetime* edwinspire_pdu_datetime_new_now_local (void);
@@ -764,7 +898,6 @@ gint edwinspire_pdu_text_convert_ConvertCharPDUToASCII (gint PDUValue);
 gchar* edwinspire_pdu_text_convert_ConvertPDU7toASCII (const gchar* Pdu);
 gchar* edwinspire_pdu_text_convert_ConvertUCS2ToASCII (const gchar* UCS2);
 gchar* edwinspire_pdu_text_convert_ConvertASCIIToUCS2 (const gchar* Text);
-GType edwinspire_pdu_pdu_alphabet_get_type (void) G_GNUC_CONST;
 edwinspirePDUPDU_ALPHABET edwinspire_pdu_text_convert_AutoPDUAlphabet (const gchar* Text);
 gchar* edwinspire_pdu_text_convert_ConvertASCIIToPDU8 (const gchar* Ascii);
 gchar* edwinspire_pdu_text_convert_ConvertPDU8toASCII (const gchar* Pdu8);
@@ -783,101 +916,23 @@ gchar* edwinspire_pdu_miscellaneous_number2hex (gint Decimal, guint Digits);
 gchar* edwinspire_pdu_miscellaneous_PathRun (void);
 edwinspirePDUMiscellaneous* edwinspire_pdu_miscellaneous_new (void);
 edwinspirePDUMiscellaneous* edwinspire_pdu_miscellaneous_construct (GType object_type);
-GType edwinspire_pdu_tp_scts_get_type (void) G_GNUC_CONST;
-edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_new (GTimeZone* tz, gint year, gint month, gint day, gint hour, gint minute, gdouble seconds);
-edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_construct (GType object_type, GTimeZone* tz, gint year, gint month, gint day, gint hour, gint minute, gdouble seconds);
-edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_new_from_octets (const gchar* octets);
-edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_construct_from_octets (GType object_type, const gchar* octets);
-edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_new_now_local (void);
-edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_construct_now_local (GType object_type);
-edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_new_from_values (gint year, gint month, gint day, gint hour, gint minute, gdouble seconds, gint gmt);
-edwinspirePDUTP_SCTS* edwinspire_pdu_tp_scts_construct_from_values (GType object_type, gint year, gint month, gint day, gint hour, gint minute, gdouble seconds, gint gmt);
-void edwinspire_pdu_tp_scts_print_values (edwinspirePDUTP_SCTS* self);
-const gchar* edwinspire_pdu_tp_scts_get_Octets (edwinspirePDUTP_SCTS* self);
-void edwinspire_pdu_tp_scts_set_Octets (edwinspirePDUTP_SCTS* self, const gchar* value);
-GType edwinspire_pdu_octet_get_type (void) G_GNUC_CONST;
-GType edwinspire_pdu_iprotocol_identifier_get_type (void) G_GNUC_CONST;
-GType edwinspire_pdu_pid_group_get_type (void) G_GNUC_CONST;
-edwinspirePDUPID_GROUP edwinspire_pdu_iprotocol_identifier_DecodeGroup (const gchar* hex);
-void edwinspire_pdu_iprotocol_identifier_OnChangeProperty (edwinspirePDUIProtocolIdentifier* self, const gchar* propertyname);
-void edwinspire_pdu_iprotocol_identifier_print_values (edwinspirePDUIProtocolIdentifier* self);
-GType edwinspire_pdu_pid_scspecificuse_get_type (void) G_GNUC_CONST;
-edwinspirePDUPID_SCSpecificUse* edwinspire_pdu_pid_scspecificuse_new (void);
-edwinspirePDUPID_SCSpecificUse* edwinspire_pdu_pid_scspecificuse_construct (GType object_type);
-GType edwinspire_pdu_pid_reserved_get_type (void) G_GNUC_CONST;
-edwinspirePDUPID_Reserved* edwinspire_pdu_pid_reserved_new (void);
-edwinspirePDUPID_Reserved* edwinspire_pdu_pid_reserved_construct (GType object_type);
-GType edwinspire_pdu_pid_messagetype_get_type (void) G_GNUC_CONST;
-edwinspirePDUPID_MessageType* edwinspire_pdu_pid_messagetype_new (void);
-edwinspirePDUPID_MessageType* edwinspire_pdu_pid_messagetype_construct (GType object_type);
-GType edwinspire_pdu_pid_short_message_get_type (void) G_GNUC_CONST;
-edwinspirePDUPID_SHORT_MESSAGE edwinspire_pdu_pid_messagetype_get_Message (edwinspirePDUPID_MessageType* self);
-void edwinspire_pdu_pid_messagetype_set_Message (edwinspirePDUPID_MessageType* self, edwinspirePDUPID_SHORT_MESSAGE value);
-GType edwinspire_pdu_pid_interworking_get_type (void) G_GNUC_CONST;
-edwinspirePDUPID_InterWorking* edwinspire_pdu_pid_interworking_new (void);
-edwinspirePDUPID_InterWorking* edwinspire_pdu_pid_interworking_construct (GType object_type);
-GType edwinspire_pdu_pid_type_telematic_device_get_type (void) G_GNUC_CONST;
-edwinspirePDUPID_TYPE_TELEMATIC_DEVICE edwinspire_pdu_pid_interworking_get_InterworkingDevice (edwinspirePDUPID_InterWorking* self);
-void edwinspire_pdu_pid_interworking_set_InterworkingDevice (edwinspirePDUPID_InterWorking* self, edwinspirePDUPID_TYPE_TELEMATIC_DEVICE value);
-gboolean edwinspire_pdu_pid_interworking_get_TelematicInterWorking (edwinspirePDUPID_InterWorking* self);
-void edwinspire_pdu_pid_interworking_set_TelematicInterWorking (edwinspirePDUPID_InterWorking* self, gboolean value);
-GType edwinspire_pdu_idata_coding_scheme_get_type (void) G_GNUC_CONST;
-GType edwinspire_pdu_idata_coding_scheme_DecodeGroup (const gchar* Bin);
-void edwinspire_pdu_idata_coding_scheme_OnChangeProperty (edwinspirePDUIDataCodingScheme* self, const gchar* propertyname);
-void edwinspire_pdu_idata_coding_scheme_print_values (edwinspirePDUIDataCodingScheme* self);
-edwinspirePDUPDU_ALPHABET edwinspire_pdu_idata_coding_scheme_get_Alpha (edwinspirePDUIDataCodingScheme* self);
-void edwinspire_pdu_idata_coding_scheme_set_Alpha (edwinspirePDUIDataCodingScheme* self, edwinspirePDUPDU_ALPHABET value);
-GType edwinspire_pdu_dcs_generaldatacodingindication_get_type (void) G_GNUC_CONST;
-GType edwinspire_pdu_dcs_message_class_get_type (void) G_GNUC_CONST;
-edwinspirePDUDCS_GeneralDataCodingIndication* edwinspire_pdu_dcs_generaldatacodingindication_new (void);
-edwinspirePDUDCS_GeneralDataCodingIndication* edwinspire_pdu_dcs_generaldatacodingindication_construct (GType object_type);
-GType edwinspire_pdu_dcs_messagewaitingindicationgroup_get_type (void) G_GNUC_CONST;
-GType edwinspire_pdu_dcs_indication_type_get_type (void) G_GNUC_CONST;
-GType edwinspire_pdu_dcs_message_waiting_indication_group_get_type (void) G_GNUC_CONST;
-edwinspirePDUDCS_MessageWaitingIndicationGroup* edwinspire_pdu_dcs_messagewaitingindicationgroup_new (void);
-edwinspirePDUDCS_MessageWaitingIndicationGroup* edwinspire_pdu_dcs_messagewaitingindicationgroup_construct (GType object_type);
-GType edwinspire_pdu_dcs_datacodingmessageclass_get_type (void) G_GNUC_CONST;
-GType edwinspire_pdu_dcs_messagecoding_get_type (void) G_GNUC_CONST;
-edwinspirePDUDCS_DataCodingMessageClass* edwinspire_pdu_dcs_datacodingmessageclass_new (void);
-edwinspirePDUDCS_DataCodingMessageClass* edwinspire_pdu_dcs_datacodingmessageclass_construct (GType object_type);
-GType edwinspire_pdu_dcs_reserved_get_type (void) G_GNUC_CONST;
-edwinspirePDUDCS_Reserved* edwinspire_pdu_dcs_reserved_new (void);
-edwinspirePDUDCS_Reserved* edwinspire_pdu_dcs_reserved_construct (GType object_type);
-GType edwinspire_pdu_typeaddress_get_type (void) G_GNUC_CONST;
-edwinspirePDUTYPE_ADDRESS* edwinspire_pdu_typeaddress_new (void);
-edwinspirePDUTYPE_ADDRESS* edwinspire_pdu_typeaddress_construct (GType object_type);
-void edwinspire_pdu_typeaddress_print_values (edwinspirePDUTYPE_ADDRESS* self);
-GType edwinspire_pdu_numbering_plan_identification_get_type (void) G_GNUC_CONST;
-edwinspirePDUNUMBERING_PLAN_IDENTIFICATION edwinspire_pdu_typeaddress_get_NPI (edwinspirePDUTYPE_ADDRESS* self);
-void edwinspire_pdu_typeaddress_set_NPI (edwinspirePDUTYPE_ADDRESS* self, edwinspirePDUNUMBERING_PLAN_IDENTIFICATION value);
-GType edwinspire_pdu_type_of_number_get_type (void) G_GNUC_CONST;
-edwinspirePDUTYPE_OF_NUMBER edwinspire_pdu_typeaddress_get_TON (edwinspirePDUTYPE_ADDRESS* self);
-void edwinspire_pdu_typeaddress_set_TON (edwinspirePDUTYPE_ADDRESS* self, edwinspirePDUTYPE_OF_NUMBER value);
-GType edwinspire_pdu_first_octet_deliver_get_type (void) G_GNUC_CONST;
-edwinspirePDUFIRST_OCTET_DELIVER* edwinspire_pdu_first_octet_deliver_new (void);
-edwinspirePDUFIRST_OCTET_DELIVER* edwinspire_pdu_first_octet_deliver_construct (GType object_type);
-void edwinspire_pdu_first_octet_deliver_print_values (edwinspirePDUFIRST_OCTET_DELIVER* self);
-gboolean edwinspire_pdu_first_octet_deliver_get_TP_RP (edwinspirePDUFIRST_OCTET_DELIVER* self);
-gboolean edwinspire_pdu_first_octet_deliver_get_TP_UDHI (edwinspirePDUFIRST_OCTET_DELIVER* self);
-gboolean edwinspire_pdu_first_octet_deliver_get_TP_SRI (edwinspirePDUFIRST_OCTET_DELIVER* self);
-gboolean edwinspire_pdu_first_octet_deliver_get_TP_MMS (edwinspirePDUFIRST_OCTET_DELIVER* self);
-GType edwinspire_pdu_message_type_indicator_get_type (void) G_GNUC_CONST;
-edwinspirePDUMESSAGE_TYPE_INDICATOR edwinspire_pdu_first_octet_deliver_get_TP_MTI (edwinspirePDUFIRST_OCTET_DELIVER* self);
-GType edwinspire_pdu_deliver_get_type (void) G_GNUC_CONST;
-edwinspirePDUDELIVER* edwinspire_pdu_deliver_new (void);
-edwinspirePDUDELIVER* edwinspire_pdu_deliver_construct (GType object_type);
-void edwinspire_pdu_deliver_print_values (edwinspirePDUDELIVER* self);
-void edwinspire_pdu_deliver_DECODE (edwinspirePDUDELIVER* self, const gchar* PDU);
-GType edwinspire_pdu_pdu_phone_get_type (void) G_GNUC_CONST;
-GType edwinspire_pdu_phone_information_get_type (void) G_GNUC_CONST;
-edwinspirePDUPHONE_INFORMATION* edwinspire_pdu_deliver_get_SMSC (edwinspirePDUDELIVER* self);
-edwinspirePDUFIRST_OCTET_DELIVER* edwinspire_pdu_deliver_get_FO (edwinspirePDUDELIVER* self);
-edwinspirePDUPHONE_INFORMATION* edwinspire_pdu_deliver_get_Sender (edwinspirePDUDELIVER* self);
-edwinspirePDUIProtocolIdentifier* edwinspire_pdu_deliver_get_PID (edwinspirePDUDELIVER* self);
-edwinspirePDUIDataCodingScheme* edwinspire_pdu_deliver_get_DCS (edwinspirePDUDELIVER* self);
-edwinspirePDUTP_SCTS* edwinspire_pdu_deliver_get_SCTS (edwinspirePDUDELIVER* self);
-edwinspirePDUOctet* edwinspire_pdu_deliver_get_UDL (edwinspirePDUDELIVER* self);
-const gchar* edwinspire_pdu_deliver_get_Message (edwinspirePDUDELIVER* self);
+edwinspirePDUPDU_PHONE* edwinspire_pdu_pdu_phone_new (void);
+edwinspirePDUPDU_PHONE* edwinspire_pdu_pdu_phone_construct (GType object_type);
+void edwinspire_pdu_pdu_phone_print_values (edwinspirePDUPDU_PHONE* self);
+gchar* edwinspire_pdu_pdu_phone_PDUToPhone (const gchar* PhonePDU);
+gint edwinspire_pdu_pdu_phone_len (const gchar* Phonepdu);
+gchar* edwinspire_pdu_pdu_phone_PhoneToPDU (const gchar* Phone);
+const gchar* edwinspire_pdu_pdu_phone_get_PDU (edwinspirePDUPDU_PHONE* self);
+void edwinspire_pdu_pdu_phone_set_PDU (edwinspirePDUPDU_PHONE* self, const gchar* value);
+const gchar* edwinspire_pdu_pdu_phone_get_TXT (edwinspirePDUPDU_PHONE* self);
+void edwinspire_pdu_pdu_phone_set_TXT (edwinspirePDUPDU_PHONE* self, const gchar* value);
+edwinspirePDUOctet* edwinspire_pdu_pdu_phone_get_length (edwinspirePDUPDU_PHONE* self);
+edwinspirePDUPHONE_INFORMATION* edwinspire_pdu_phone_information_new (void);
+edwinspirePDUPHONE_INFORMATION* edwinspire_pdu_phone_information_construct (GType object_type);
+void edwinspire_pdu_phone_information_print (edwinspirePDUPHONE_INFORMATION* self);
+edwinspirePDUTYPE_ADDRESS* edwinspire_pdu_phone_information_get_TA (edwinspirePDUPHONE_INFORMATION* self);
+void edwinspire_pdu_phone_information_set_TA (edwinspirePDUPHONE_INFORMATION* self, edwinspirePDUTYPE_ADDRESS* value);
+const gchar* edwinspire_pdu_phone_information_get_PDU_Format (edwinspirePDUPHONE_INFORMATION* self);
 GType edwinspire_pdu_first_octet_submit_get_type (void) G_GNUC_CONST;
 edwinspirePDUFIRST_OCTET_SUBMIT* edwinspire_pdu_first_octet_submit_new (void);
 edwinspirePDUFIRST_OCTET_SUBMIT* edwinspire_pdu_first_octet_submit_construct (GType object_type);
@@ -888,7 +943,6 @@ gboolean edwinspire_pdu_first_octet_submit_get_TP_UDHI (edwinspirePDUFIRST_OCTET
 void edwinspire_pdu_first_octet_submit_set_TP_UDHI (edwinspirePDUFIRST_OCTET_SUBMIT* self, gboolean value);
 gboolean edwinspire_pdu_first_octet_submit_get_TP_SRR (edwinspirePDUFIRST_OCTET_SUBMIT* self);
 void edwinspire_pdu_first_octet_submit_set_TP_SRR (edwinspirePDUFIRST_OCTET_SUBMIT* self, gboolean value);
-GType edwinspire_pdu_validity_period_format_get_type (void) G_GNUC_CONST;
 edwinspirePDUVALIDITY_PERIOD_FORMAT edwinspire_pdu_first_octet_submit_get_TP_VPF (edwinspirePDUFIRST_OCTET_SUBMIT* self);
 void edwinspire_pdu_first_octet_submit_set_TP_VPF (edwinspirePDUFIRST_OCTET_SUBMIT* self, edwinspirePDUVALIDITY_PERIOD_FORMAT value);
 gboolean edwinspire_pdu_first_octet_submit_get_TP_RD (edwinspirePDUFIRST_OCTET_SUBMIT* self);
@@ -916,7 +970,6 @@ edwinspirePDUIDataCodingScheme* edwinspire_pdu_submit_get_DCS (edwinspirePDUSUBM
 void edwinspire_pdu_submit_set_DCS (edwinspirePDUSUBMIT* self, edwinspirePDUIDataCodingScheme* value);
 GType edwinspire_pdu_validity_period_get_type (void) G_GNUC_CONST;
 edwinspirePDUVALIDITY_PERIOD* edwinspire_pdu_submit_get_TP_VP (edwinspirePDUSUBMIT* self);
-GType edwinspire_pdu_text_pdu_text_get_type (void) G_GNUC_CONST;
 edwinspirePDUTextPDUText* edwinspire_pdu_submit_get_Message (edwinspirePDUSUBMIT* self);
 void edwinspire_pdu_submit_set_Message (edwinspirePDUSUBMIT* self, edwinspirePDUTextPDUText* value);
 gint edwinspire_pdu_submit_get_Minutes_Validity (edwinspirePDUSUBMIT* self);
@@ -925,23 +978,6 @@ gint edwinspire_pdu_submit_get_length (edwinspirePDUSUBMIT* self);
 GType edwinspire_pdu_submi_twith_dcs_general_data_coding_indication_get_type (void) G_GNUC_CONST;
 edwinspirePDUSUBMITwithDCSGeneralDataCodingIndication* edwinspire_pdu_submi_twith_dcs_general_data_coding_indication_new (const gchar* phone, const gchar* message, gboolean statusreport, gboolean EnableMsgClass, edwinspirePDUDCS_MESSAGE_CLASS msgclass);
 edwinspirePDUSUBMITwithDCSGeneralDataCodingIndication* edwinspire_pdu_submi_twith_dcs_general_data_coding_indication_construct (GType object_type, const gchar* phone, const gchar* message, gboolean statusreport, gboolean EnableMsgClass, edwinspirePDUDCS_MESSAGE_CLASS msgclass);
-edwinspirePDUPDU_PHONE* edwinspire_pdu_pdu_phone_new (void);
-edwinspirePDUPDU_PHONE* edwinspire_pdu_pdu_phone_construct (GType object_type);
-void edwinspire_pdu_pdu_phone_print_values (edwinspirePDUPDU_PHONE* self);
-gchar* edwinspire_pdu_pdu_phone_PDUToPhone (const gchar* PhonePDU);
-gint edwinspire_pdu_pdu_phone_len (const gchar* Phonepdu);
-gchar* edwinspire_pdu_pdu_phone_PhoneToPDU (const gchar* Phone);
-const gchar* edwinspire_pdu_pdu_phone_get_PDU (edwinspirePDUPDU_PHONE* self);
-void edwinspire_pdu_pdu_phone_set_PDU (edwinspirePDUPDU_PHONE* self, const gchar* value);
-const gchar* edwinspire_pdu_pdu_phone_get_TXT (edwinspirePDUPDU_PHONE* self);
-void edwinspire_pdu_pdu_phone_set_TXT (edwinspirePDUPDU_PHONE* self, const gchar* value);
-edwinspirePDUOctet* edwinspire_pdu_pdu_phone_get_length (edwinspirePDUPDU_PHONE* self);
-edwinspirePDUPHONE_INFORMATION* edwinspire_pdu_phone_information_new (void);
-edwinspirePDUPHONE_INFORMATION* edwinspire_pdu_phone_information_construct (GType object_type);
-void edwinspire_pdu_phone_information_print (edwinspirePDUPHONE_INFORMATION* self);
-edwinspirePDUTYPE_ADDRESS* edwinspire_pdu_phone_information_get_TA (edwinspirePDUPHONE_INFORMATION* self);
-void edwinspire_pdu_phone_information_set_TA (edwinspirePDUPHONE_INFORMATION* self, edwinspirePDUTYPE_ADDRESS* value);
-const gchar* edwinspire_pdu_phone_information_get_PDU_Format (edwinspirePDUPHONE_INFORMATION* self);
 edwinspirePDUVALIDITY_PERIOD* edwinspire_pdu_validity_period_new (void);
 edwinspirePDUVALIDITY_PERIOD* edwinspire_pdu_validity_period_construct (GType object_type);
 void edwinspire_pdu_validity_period_Set_SCTS (edwinspirePDUVALIDITY_PERIOD* self, edwinspirePDUTP_SCTS* _SCTS_, edwinspirePDUVALIDITY_PERIOD_FORMAT VPF_);
@@ -964,42 +1000,6 @@ edwinspirePDUTP_SCTS* edwinspire_pdu_validity_period_get_Absolute (edwinspirePDU
 void edwinspire_pdu_validity_period_set_Absolute (edwinspirePDUVALIDITY_PERIOD* self, edwinspirePDUTP_SCTS* value);
 edwinspirePDUTP_SCTS* edwinspire_pdu_validity_period_get_Enhanced (edwinspirePDUVALIDITY_PERIOD* self);
 void edwinspire_pdu_validity_period_set_Enhanced (edwinspirePDUVALIDITY_PERIOD* self, edwinspirePDUTP_SCTS* value);
-gchar* edwinspire_pdu_type_of_number_ToBin (edwinspirePDUTYPE_OF_NUMBER self);
-gchar* edwinspire_pdu_numbering_plan_identification_ToBin (edwinspirePDUNUMBERING_PLAN_IDENTIFICATION self);
-gchar* edwinspire_pdu_validity_period_format_ToBin (edwinspirePDUVALIDITY_PERIOD_FORMAT self);
-gchar* edwinspire_pdu_pid_type_telematic_device_ToBin (edwinspirePDUPID_TYPE_TELEMATIC_DEVICE self);
-gchar* edwinspire_pdu_message_type_indicator_ToBin (edwinspirePDUMESSAGE_TYPE_INDICATOR self);
-gchar* edwinspire_pdu_pid_short_message_ToBin (edwinspirePDUPID_SHORT_MESSAGE self);
-gchar* edwinspire_pdu_pdu_alphabet_ToBin (edwinspirePDUPDU_ALPHABET self);
-gchar* edwinspire_pdu_dcs_message_class_ToBin (edwinspirePDUDCS_MESSAGE_CLASS self);
-gchar* edwinspire_pdu_dcs_message_waiting_indication_group_ToBin (edwinspirePDUDCS_MESSAGE_WAITING_INDICATION_GROUP self);
-gchar* edwinspire_pdu_dcs_indication_type_ToBin (edwinspirePDUDCS_INDICATION_TYPE self);
-GType edwinspire_pdu_dcs_coding_group_bits_get_type (void) G_GNUC_CONST;
-edwinspirePDUOctet* edwinspire_pdu_octet_new (gint dec);
-edwinspirePDUOctet* edwinspire_pdu_octet_construct (GType object_type, gint dec);
-edwinspirePDUOctet* edwinspire_pdu_octet_new_from_hex (const gchar* hex);
-edwinspirePDUOctet* edwinspire_pdu_octet_construct_from_hex (GType object_type, const gchar* hex);
-edwinspirePDUOctet* edwinspire_pdu_octet_new_from_Bin (const gchar* bin);
-edwinspirePDUOctet* edwinspire_pdu_octet_construct_from_Bin (GType object_type, const gchar* bin);
-const gchar* edwinspire_pdu_octet_get_Hex (edwinspirePDUOctet* self);
-void edwinspire_pdu_octet_set_Hex (edwinspirePDUOctet* self, const gchar* value);
-gint edwinspire_pdu_octet_get_Dec (edwinspirePDUOctet* self);
-void edwinspire_pdu_octet_set_Dec (edwinspirePDUOctet* self, gint value);
-const gchar* edwinspire_pdu_octet_get_Bin (edwinspirePDUOctet* self);
-void edwinspire_pdu_octet_set_Bin (edwinspirePDUOctet* self, const gchar* value);
-edwinspirePDUTextPDUText* edwinspire_pdu_text_pdu_text_new (void);
-edwinspirePDUTextPDUText* edwinspire_pdu_text_pdu_text_construct (GType object_type);
-void edwinspire_pdu_text_pdu_text_print_values (edwinspirePDUTextPDUText* self);
-gchar* edwinspire_pdu_text_pdu_text_ToTXT (edwinspirePDUTextPDUText* self, const gchar* pdu, edwinspirePDUPDU_ALPHABET Alp);
-gchar* edwinspire_pdu_text_pdu_text_ToPDU (edwinspirePDUTextPDUText* self, const gchar* txt, edwinspirePDUPDU_ALPHABET Alp);
-gint edwinspire_pdu_text_pdu_text_CountUnichars (const gchar* text);
-edwinspirePDUPDU_ALPHABET edwinspire_pdu_text_pdu_text_get_Alphabet (edwinspirePDUTextPDUText* self);
-void edwinspire_pdu_text_pdu_text_set_Alphabet (edwinspirePDUTextPDUText* self, edwinspirePDUPDU_ALPHABET value);
-const gchar* edwinspire_pdu_text_pdu_text_get_TXT (edwinspirePDUTextPDUText* self);
-void edwinspire_pdu_text_pdu_text_set_TXT (edwinspirePDUTextPDUText* self, const gchar* value);
-const gchar* edwinspire_pdu_text_pdu_text_get_PDU (edwinspirePDUTextPDUText* self);
-void edwinspire_pdu_text_pdu_text_set_PDU (edwinspirePDUTextPDUText* self, const gchar* value);
-edwinspirePDUOctet* edwinspire_pdu_text_pdu_text_get_UDL (edwinspirePDUTextPDUText* self);
 
 
 G_END_DECLS
