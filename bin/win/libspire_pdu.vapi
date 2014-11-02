@@ -134,6 +134,7 @@ namespace edwinspire {
 			public static string StringTrim (string value);
 			public static int hex2number (string buffer);
 			public static string number2hex (int Decimal, uint Digits);
+			public static string text_as_unicode (string text);
 		}
 		[CCode (cheader_filename = "libspire_pdu.h")]
 		public class Octet : GLib.Object {

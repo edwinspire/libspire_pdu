@@ -907,6 +907,7 @@ edwinspirePDUTextConvert* edwinspire_pdu_text_convert_new (void);
 edwinspirePDUTextConvert* edwinspire_pdu_text_convert_construct (GType object_type);
 GType edwinspire_pdu_miscellaneous_get_type (void) G_GNUC_CONST;
 gchar* edwinspire_pdu_miscellaneous_StringTrim (const gchar* value);
+gchar* edwinspire_pdu_miscellaneous_text_as_unicode (const gchar* text);
 GDateTime* edwinspire_pdu_miscellaneous_DateTimeFromStringISO8601 (const gchar* iso8601format);
 gint edwinspire_pdu_miscellaneous_hex2number (const gchar* buffer);
 gint edwinspire_pdu_miscellaneous_ConvertBinToInt (const gchar* Binary);

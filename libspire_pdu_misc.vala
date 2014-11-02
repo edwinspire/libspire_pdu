@@ -1151,6 +1151,26 @@ int i = 0;
 		public static string StringTrim(string value) {
 			return value.strip();
 		}
+		
+		public static string text_as_unicode(string text){
+			
+			var msg = new StringBuilder();
+			
+			int CLength = text.length;
+			unichar caracter;
+			if(CLength > 0) {
+				for (int i = 0; text.get_next_char(ref i, out caracter);) {
+					if(i>CLength) {
+						break;
+					}
+					if(caracter.validate()) {
+						msg.append_unichar(caracter);
+					}
+				}
+			}
+			return msg.str;
+		}		
+		
 		/// <summary>
 		/// Convierte una cadena que representa una fecha en formato iso8601 a DateTime
 		/// </summary>

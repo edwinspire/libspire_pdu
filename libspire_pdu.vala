@@ -187,31 +187,32 @@ return iUDL;
 		}
 		internal static string ENCODE(string MessageTxT, PDU_ALPHABET Alphabet, out int Length) {
 			StringBuilder MessageSMS = new StringBuilder();
+			string msg = Miscellaneous.text_as_unicode(MessageTxT);
 			switch(Alphabet) {
 				case PDU_ALPHABET.DATA8Bits:
 					//Implementar
 				//Limitar a 140 caracteres
 				//TODO: La limitacion deberia hacerse en la funcion y no aqui
-				if(MessageTxT.length>140) {
-					MessageSMS.append(TextConvert.ConvertASCIIToPDU8(MessageTxT.substring(0,140)));
+				if(msg.length>140) {
+					MessageSMS.append(TextConvert.ConvertASCIIToPDU8(msg.substring(0,140)));
 				} else {
-					MessageSMS.append(TextConvert.ConvertASCIIToPDU8(MessageTxT));
+					MessageSMS.append(TextConvert.ConvertASCIIToPDU8(msg));
 				}
-				Length = CountUnichars(MessageTxT);
+				Length = CountUnichars(msg);
 				break;
 				case PDU_ALPHABET.UCS2:
 					//Limitar a 70 caracteres
 				//TODO: La limitacion deberia hacerse en la funcion y no aqui
-				if(MessageTxT.length>70) {
-					MessageSMS.append(TextConvert.ConvertASCIIToUCS2(MessageTxT.substring(0,70)));
+				if(msg.length>70) {
+					MessageSMS.append(TextConvert.ConvertASCIIToUCS2(msg.substring(0,70)));
 				} else {
-					MessageSMS.append(TextConvert.ConvertASCIIToUCS2(MessageTxT));
+					MessageSMS.append(TextConvert.ConvertASCIIToUCS2(msg));
 				}
 				//Length = MessageSMS.str.length*2;
-				Length = CountUnichars(MessageTxT)*2;
+				Length = CountUnichars(msg)*2;
 				break;
 				default:
-				StringPDU7Bits DatosPDU = TextConvert.StringToSevenBits(MessageTxT);
+				StringPDU7Bits DatosPDU = TextConvert.StringToSevenBits(msg);
 				MessageSMS.append(DatosPDU.PDU);
 				Length = DatosPDU.Length;
 				/*
